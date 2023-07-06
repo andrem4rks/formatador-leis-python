@@ -16,11 +16,23 @@ for linha in linhas_formatadas:
     index += 1
 
 index = 0
+aux = ""
 for linha in linhas_formatadas:
-    linhas_formatadas.insert(index, '<p></p>')
+    if(linha.isupper()):
+        linhas_formatadas[index] = "<strong>" + linha + "</strong>"
     index += 1
 
+index = 0
 for linha in linhas_formatadas:
+    linhas_formatadas[index] = "<p>" + linha + "</p>"
+    index += 1
+
+texto_formatado = []
+for linha in linhas_formatadas:
+    texto_formatado.append(linha)
+    texto_formatado.append("<p></p>")
+
+for linha in texto_formatado:
     print(linha)
 
  # if (linha.isupper() and index == 0):
